@@ -1,0 +1,12 @@
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\MongoCrud.deps.json
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\MongoCrud.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\MongoCrud.pdb
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\obj\Debug\net6.0\MongoCrud.csproj.AssemblyReference.cache
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\obj\Debug\net6.0\MongoCrud.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\obj\Debug\net6.0\MongoCrud.AssemblyInfoInputs.cache
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\obj\Debug\net6.0\MongoCrud.AssemblyInfo.cs
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\obj\Debug\net6.0\MongoCrud.csproj.CoreCompileInputs.cache
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\obj\Debug\net6.0\MongoCrud.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\obj\Debug\net6.0\refint\MongoCrud.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\obj\Debug\net6.0\MongoCrud.pdb
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\obj\Debug\net6.0\ref\MongoCrud.dll

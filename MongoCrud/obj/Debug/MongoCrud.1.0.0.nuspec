@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MongoCrud</id>
+    <version>1.0.0</version>
+    <authors>MongoCrud</authors>
+    <license type="file">LICENSE.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <description>Package Description</description>
+    <repository url="https://github.com/skiddow/MongoCrud" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="MongoDB.Driver" version="2.18.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\MongoCrud.dll" target="lib\net6.0\MongoCrud.dll" />
+    <file src="D:\C# Projects\MongoCrud\MongoCrud\LICENSE.txt" target="\LICENSE.txt" />
+  </files>
+</package>
