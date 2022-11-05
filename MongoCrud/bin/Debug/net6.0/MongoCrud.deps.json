@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "MongoCrud/1.0.0.1": {
+      "MongoCrud/1.0.1": {
         "dependencies": {
           "MongoDB.Driver": "2.18.0"
         },
@@ -144,7 +144,7 @@
     }
   },
   "libraries": {
-    "MongoCrud/1.0.0.1": {
+    "MongoCrud/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

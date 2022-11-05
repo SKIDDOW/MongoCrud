@@ -25,15 +25,15 @@ Insert Employee data
 
 ```c#
 
-using (MongoCrud db = new MongoCrud("mongodb://localhost:27017", "EmployeeDB"))
-{
-    var emp = new Employee()
-    {
-        Name = NameComboBox.Text,
-        Birthday = Convert.ToDateTime("1981-04-13")
-    };
-    await db.Insert(emp, "Employee"); 
-}
+        using (MongoCrud.MongoCrud db = new MongoCrud.MongoCrud("mongodb://localhost:27017", "EmployeeDB"))
+        {
+            var emp = new Employee()
+            {
+                Name = "Jone Doe",
+                Birthday = Convert.ToDateTime("1981-04-13")
+            };
+            await db.InsertRecord("Employee", emp);
+        }
 
 ```
 
