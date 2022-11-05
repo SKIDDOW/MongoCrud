@@ -24,9 +24,13 @@ public  class Employee
 Insert Employee data
 
 ```c#
-using MongoCrud;
+string connectionString = "mongodb://localhost:27017";
+string collectionName = "EmployeeDB";
 
-using (MongoCrud.MongoCrud db = new MongoCrud.MongoCrud("mongodb://localhost:27017", "EmployeeDB"))
+```
+
+```c#
+using (MongoCrud.MongoCrud db = new MongoCrud.MongoCrud(connectionString, collectionName))
 {
     var emp = new Employee()
     {
