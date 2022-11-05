@@ -1,0 +1,15 @@
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\MongoCrud.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\MongoCrud.deps.json
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\MongoCrud.pdb
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\DnsClient.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\Microsoft.Extensions.Logging.Abstractions.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\MongoDB.Bson.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\MongoDB.Driver.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\MongoDB.Driver.Core.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\MongoDB.Libmongocrypt.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\SharpCompress.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\Snappier.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\ZstdSharp.dll
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\runtimes\linux\native\libmongocrypt.so
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\runtimes\osx\native\libmongocrypt.dylib
+D:\C# Projects\MongoCrud\MongoCrud\MongoCrud\bin\Debug\net6.0\publish\runtimes\win\native\mongocrypt.dll

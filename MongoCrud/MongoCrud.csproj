@@ -6,9 +6,22 @@
     <Nullable>enable</Nullable>
     <RepositoryUrl>https://github.com/skiddow/MongoCrud</RepositoryUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Authors>SKIDDOW</Authors>
+    <Description>Simple C# class for managing MongoDB collections</Description>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+    <PackAsTool>True</PackAsTool>
+    <Version>1.0.0.1</Version>
+    <PackageProjectUrl>https://github.com/skiddow/MongoCrud</PackageProjectUrl>
+    <PackageTags>MongoCrud, MongoDB, CRUD</PackageTags>
+    <PackageIcon>Asset 1@4x.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\..\..\Desktop\4x\4x\Asset 1@4x.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="..\LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
