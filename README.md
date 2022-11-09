@@ -10,7 +10,7 @@ MongoCrud is a class to manage MongoDB data collections in C# .NET
     ```
     dotnet add package MongoCrud
     ```
-<hr>
+<hr/>
 ## Usage
 
 Employee Model
