@@ -22,7 +22,7 @@ public  class Employee
 
 ```
 
-Insert Employee data
+### Insert Employee data
 
 ```c#
 using MongoCrud;
@@ -46,7 +46,7 @@ using (Crud db = new Crud(connectionString, collectionName))
 
 ```
 
-Insert unique recored
+### Insert unique recored
 
 ```c#
 using (Crud db = new Crud(connectionString, collectionName))
@@ -61,14 +61,30 @@ using (Crud db = new Crud(connectionString, collectionName))
 }
 ```
 
-Load all records of a collection
+### Load all records of a collection
 
 ```c#
 var rec = db.LoadRecords<Employee>("Employee");
 ```
 
-Load a record by index
+### Load records by index
 
 ```c#
 var rec = db.LoadRecordByIndex<Employee>("Employee", "Name", "Jone Doe");
+```
+
+### Load one record by index
+
+```c#
+var rec = db.LoadOneRecordByIndex<Employee>("Employee", "Name", "Jone Doe");
+```
+
+### Load a record by Id
+First, we have to get ObjectId before doing this. To get an ObjectId you can use any method as shown in above.
+```c#
+ObjectId ObjectID = new ObjectId("6366675caf5305273398cfbd");
+```
+
+```c#
+var rec = db.LoadRecordById<Employee>("Employee", ObjectID);
 ```
