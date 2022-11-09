@@ -13,7 +13,7 @@
     <PackAsTool>False</PackAsTool>
     <Version>1.0.2</Version>
     <PackageProjectUrl>https://github.com/skiddow/MongoCrud</PackageProjectUrl>
-    <PackageTags>MongoCrud, MongoDB, CRUD</PackageTags>
+    <PackageTags>MongoCrud, MongoDB, CRUD, NoSQL, Database</PackageTags>
     <PackageIcon>Asset 1@4x.png</PackageIcon>
   </PropertyGroup>
 

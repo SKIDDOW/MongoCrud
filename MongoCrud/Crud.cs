@@ -130,6 +130,13 @@ namespace MongoCrud
             await coll.DeleteOneAsync(filter);
         }
 
+        public void DeleteRecord<T>(string table, ObjectId id) // Delete record by id.
+        {
+            var collection = ConnectToMongo<T>(table);
+            var filter = Builders<T>.Filter.Eq("Id", id);
+            collection.DeleteOne(filter);
+        }
+
         public void UpsertRecord<T>(string collection, ObjectId id, T record) // Update data or if it isnt available create it
         {
             var coll = ConnectToMongo<T>(collection);

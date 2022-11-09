@@ -102,3 +102,15 @@ Below example will display all records from Employee collection, which Name star
 ```c#
 var rec = db.SearchCase<Employee>("Employee", "Name", "J");
 ```
+
+### Delete all records by index
+This will delete all records where EmpID is, '1000'. However, if EmpID is unique this will also delete a single record.
+```c#
+db.DeleteRecordByIndex<Employee>("Employee", "EmpID", "1000");
+```
+
+### Delete a record
+To delete a record we have to get ObjectId
+```c#
+db.DeleteRecord<Employee>("Employee", ObjectID);
+```
