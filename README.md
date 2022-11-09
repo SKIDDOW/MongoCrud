@@ -96,3 +96,9 @@ ObjectId ObjectID = new ObjectId("6366675caf5305273398cfbd");
 ```c#
 var rec = db.LoadRecordById<Employee>("Employee", ObjectID);
 ```
+
+### Search case
+Below example will display all records from Employee collection, which Name starts from 'J'
+```c#
+var rec = db.SearchCase<Employee>("Employee", "Name", "J");
+```
