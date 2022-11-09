@@ -140,10 +140,10 @@ namespace MongoCrud
         public void UpsertRecord<T>(string collection, ObjectId id, T record) // Update data or if it isnt available create it
         {
             var coll = ConnectToMongo<T>(collection);
-#pragma warning disable CS0618 // 'IMongoCollection<T>.ReplaceOne(FilterDefinition<T>, T, UpdateOptions, CancellationToken)' is obsolete: 'Use the overload that takes a ReplaceOptions instead of an UpdateOptions.'
+            // 'IMongoCollection<T>.ReplaceOne(FilterDefinition<T>, T, UpdateOptions, CancellationToken)' is obsolete: 'Use the overload that takes a ReplaceOptions instead of an UpdateOptions.'
             var result = coll.ReplaceOne(new BsonDocument("_id", id), record,
             new UpdateOptions { IsUpsert = true });
-#pragma warning restore CS0618 // 'IMongoCollection<T>.ReplaceOne(FilterDefinition<T>, T, UpdateOptions, CancellationToken)' is obsolete: 'Use the overload that takes a ReplaceOptions instead of an UpdateOptions.'
+            // 'IMongoCollection<T>.ReplaceOne(FilterDefinition<T>, T, UpdateOptions, CancellationToken)' is obsolete: 'Use the overload that takes a ReplaceOptions instead of an UpdateOptions.'
         }
     }
 }
