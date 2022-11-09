@@ -8,10 +8,10 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Authors>SKIDDOW</Authors>
     <Description>Simple C# class for managing MongoDB collections</Description>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
-    <FileVersion>1.0.2</FileVersion>
+    <AssemblyVersion>1.0.3</AssemblyVersion>
+    <FileVersion>1.0.3</FileVersion>
     <PackAsTool>False</PackAsTool>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageProjectUrl>https://github.com/skiddow/MongoCrud</PackageProjectUrl>
     <PackageTags>MongoCrud, MongoDB, CRUD, NoSQL, Database</PackageTags>
     <PackageIcon>Asset 1@4x.png</PackageIcon>
