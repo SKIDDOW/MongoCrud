@@ -1,5 +1,6 @@
 # MongoCrud
-[Please note that this doc is under development]
+Please note that this doc is under development.
+
 MongoCrud is a class to manage MongoDB data collections in C# .NET
 
 # Usage
