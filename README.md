@@ -1,8 +1,6 @@
 ![MongoCrud](https://raw.githubusercontent.com/skiddow/MongoCrud/main/assets/banner.jpg)
 # MongoCrud
-Please note that this doc is under development.
-
-MongoCrud is a class to manage MongoDB data collections in C# .NET
+MongoCrud is a simple c# class for MongoDB crud operations.
 
 ## Installation
 - You can search for 'MongoCrud' in NuGet Pakage Manager in Visual Studio.
