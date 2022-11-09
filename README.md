@@ -113,7 +113,7 @@ Below example will display all records from Employee collection, which Name star
 ```c#
 var rec = db.SearchCase<Employee>("Employee", "Name", "J");
 ```
-<hr/>
+---
 
 ### Delete all records by index
 This will delete all records where EmpID is, '1000'. However, if EmpID is unique this will also delete a single record.
