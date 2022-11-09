@@ -3,7 +3,14 @@ Please note that this doc is under development.
 
 MongoCrud is a class to manage MongoDB data collections in C# .NET
 
-# Usage
+## Installation
+- You can search for 'MongoCrud' in NuGet Pakage Manager in Visual Studio.
+- Or you can use .NET CLI
+```
+dotnet add package MongoCrud
+```
+
+## Usage
 
 Employee Model
 
