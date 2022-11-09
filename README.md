@@ -75,7 +75,7 @@ await db.InsertUniqRecord("Employee", emp, "EmpID");
 ### Load all records of a collection
 
 ```c#
-var rec = db.LoadRecords<Employee>("Employee");
+var rec = await db.LoadRecords<Employee>("Employee");
 ```
 
 ### Load records by index
