@@ -125,3 +125,19 @@ To delete a record we have to get ObjectId
 ```c#
 db.DeleteRecord<Employee>("Employee", ObjectID);
 ```
+---
+
+### Updating a record
+First we need to load record, and then update.
+```c#
+var oneRec = db.LoadRecordById<Employee>("Employee", ObjectID);
+oneRec.Id = ObjectID; // or, oneRec.Id = oneRec.Id;
+oneRec.Name = "Jone Doe Smith"
+```
+This will update Employee Name.
+
+```c#
+db.UpsertRecord("Employee", oneRec.Id, oneRec);
+```
+
+# ❤️😍
