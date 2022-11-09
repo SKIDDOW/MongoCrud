@@ -4,13 +4,13 @@ using MongoDB.Driver;
 
 namespace MongoCrud
 {
-    public class MongoCrud : IDisposable
+    public class Crud : IDisposable
     {
         // Doc at : https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose
         // To detect redundant calls
         private bool _disposedValue;
 
-        ~MongoCrud() => Dispose(false);
+        ~Crud() => Dispose(false);
 
         public void Dispose()
         {
@@ -42,7 +42,7 @@ namespace MongoCrud
         private string ConnectionString;
         private string DatabaseName;
 
-        public MongoCrud(string connectionString, string DBName)
+        public Crud(string connectionString, string DBName)
         {
             ConnectionString = connectionString;
             DatabaseName = DBName;
