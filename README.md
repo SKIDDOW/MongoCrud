@@ -24,17 +24,20 @@ public  class Employee
 Insert Employee data
 
 ```c#
+using MongoCrud;
+
 string connectionString = "mongodb://localhost:27017";
 string collectionName = "EmployeeDB";
 
 ```
 
 ```c#
-using (MongoCrud.MongoCrud db = new MongoCrud.MongoCrud(connectionString, collectionName))
+using (Crud db = new Crud(connectionString, collectionName))
 {
     var emp = new Employee()
     {
         Name = "Jone Doe",
+        EmpID = 1000,
         Birthday = Convert.ToDateTime("1981-04-13")
     };
     await db.InsertRecord("Employee", emp);
@@ -42,6 +45,23 @@ using (MongoCrud.MongoCrud db = new MongoCrud.MongoCrud(connectionString, collec
 
 ```
 
+Insert unique recored
 
+```c#
+using (Crud db = new Crud(connectionString, collectionName))
+{
+    var emp = new Employee()
+    {
+        Name = "Jone Doe",
+        EmpID = 1000, // Unique ID
+        Birthday = Convert.ToDateTime("1981-04-13")
+    };
+    await db.InsertUniqRecord("Employee", emp, "EmpID");
+}
+```
 
+Load all records of a collection
 
+```c#
+var rec = db.LoadRecords<Employee>("Employee");
+```
