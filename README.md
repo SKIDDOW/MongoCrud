@@ -1,3 +1,4 @@
+![MongoCrud](https://raw.githubusercontent.com/skiddow/MongoCrud/main/assets/banner.jpg)
 # MongoCrud
 Please note that this doc is under development.
 
