@@ -30,7 +30,7 @@ public  class Employee
 
 ```
 
-### Insert Employee data
+### Open connection to MongoDB (using statement)
 
 ```c#
 using MongoCrud;
@@ -43,30 +43,34 @@ string collectionName = "EmployeeDB";
 ```c#
 using (Crud db = new Crud(connectionString, collectionName))
 {
-    var emp = new Employee()
-    {
-        Name = "Jone Doe",
-        EmpID = 1000,
-        Birthday = Convert.ToDateTime("1981-04-13")
-    };
-    await db.InsertRecord("Employee", emp);
+    // do your things here ...
 }
+
+```
+
+### Insert Employee data
+
+```c#
+var emp = new Employee()
+{
+    Name = "Jone Doe",
+    EmpID = 1000,
+    Birthday = Convert.ToDateTime("1981-04-13")
+};
+await db.InsertRecord("Employee", emp);
 
 ```
 
 ### Insert unique recored
 
 ```c#
-using (Crud db = new Crud(connectionString, collectionName))
+var emp = new Employee()
 {
-    var emp = new Employee()
-    {
-        Name = "Jone Doe",
-        EmpID = 1000, // Unique ID
-        Birthday = Convert.ToDateTime("1981-04-13")
-    };
-    await db.InsertUniqRecord("Employee", emp, "EmpID");
-}
+    Name = "Jone Doe",
+    EmpID = 1000, // Unique ID
+    Birthday = Convert.ToDateTime("1981-04-13")
+};
+await db.InsertUniqRecord("Employee", emp, "EmpID");
 ```
 
 ### Load all records of a collection
