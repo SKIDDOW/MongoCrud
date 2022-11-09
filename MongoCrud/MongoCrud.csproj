@@ -7,7 +7,7 @@
     <RepositoryUrl>https://github.com/skiddow/MongoCrud</RepositoryUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Authors>SKIDDOW</Authors>
-    <Description>Simple C# class for managing MongoDB collections</Description>
+    <Description>Simple c# class for MongoDB crud operations.</Description>
     <AssemblyVersion>1.0.3</AssemblyVersion>
     <FileVersion>1.0.3</FileVersion>
     <PackAsTool>False</PackAsTool>
