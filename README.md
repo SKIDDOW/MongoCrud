@@ -68,7 +68,7 @@ await db.InsertRecord("Employee", emp);
 ```
 ---
 
-### Insert unique recored
+### Insert unique record
 
 ```c#
 var emp = new Employee()
