@@ -1,5 +1,5 @@
 ![MongoCrud](https://raw.githubusercontent.com/skiddow/MongoCrud/main/assets/banner.jpg)
-# MongoCrud
+# MongoCrud ➕ 🔄️ ❌
 MongoCrud is a simple c# class for MongoDB crud operations.
 
 ## Installation
