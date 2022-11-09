@@ -55,91 +55,87 @@ namespace MongoCrud
             return db.GetCollection<T>(collection);
         }
 
-        public Task InsertRecord<T>(string table, T record)
+        public Task InsertRecord<T>(string collection, T record)
         {
-            var collection = ConnectToMongo<T>(table);
-            return collection.InsertOneAsync(record);
+            var coll = ConnectToMongo<T>(collection);
+            return coll.InsertOneAsync(record);
         }
 
 
-        public async Task InsertUniqRecord<T>(string table, T record, string unique_index)
+        public async Task InsertUniqRecord<T>(string collection, T record, string unique_index)
         {
-            var collection = ConnectToMongo<T>(table);
-            await collection.InsertOneAsync(record);
+            var coll = ConnectToMongo<T>(collection);
+            await coll.InsertOneAsync(record);
 
             // Create the unique index on the field 'unique_index'
             var options = new CreateIndexOptions { Unique = true };
-            await collection.Indexes.CreateOneAsync("{ '" + unique_index + "' : 1 }", options);
+            await coll.Indexes.CreateOneAsync("{ '" + unique_index + "' : 1 }", options);
 
-        }
+        }        
 
-        
-
-        public async Task<List<T>> LoadRecords<T>(string collection_name)
+        public async Task<List<T>> LoadRecords<T>(string collection)
         {
-            var collection = ConnectToMongo<T>(collection_name);
-            var result = await collection.FindAsync(_ => true);
+            var coll = ConnectToMongo<T>(collection);
+            var result = await coll.FindAsync(_ => true);
             return result.ToList();
         }
 
 
         //List records by an index. =====================================
-        public List<T> LoadRecordByIndex<T>(string table, string field, string value)
+        public List<T> LoadRecordByIndex<T>(string collection, string field, string value)
         {
-            var collection = ConnectToMongo<T>(table);
+            var coll = ConnectToMongo<T>(collection);
             var filter = Builders<T>.Filter.Eq(field, value);
-            return collection.Find(filter).ToList();
+            return coll.Find(filter).ToList();
         }
 
 
-        public T LoadOneRecordByIndex<T>(string table, string field, string value)
+        public T LoadOneRecordByIndex<T>(string collection, string field, string value)
         {
-            var collection = ConnectToMongo<T>(table);
+            var coll = ConnectToMongo<T>(collection);
             var filter = Builders<T>.Filter.Eq(field, value);
-            return collection.Find(filter).First();
+            return coll.Find(filter).First();
         }
 
 
-        public T LoadRecordById<T>(string table, ObjectId id)
+        public T LoadRecordById<T>(string collection, ObjectId id)
         {
-            var collection = ConnectToMongo<T>(table);
+            var coll = ConnectToMongo<T>(collection);
             var filter = Builders<T>.Filter.Eq("Id", id); // list only where id =
-            return collection.Find(filter).First();
+            return coll.Find(filter).First();
         }
 
-        public List<T> SearchCase<T>(string table, string field, string value)
+        public List<T> SearchCase<T>(string collection, string field, string value)
         {
             var queryExpr = new BsonRegularExpression(new Regex(value, RegexOptions.None));
             var builder = Builders<T>.Filter;
-            var collection = ConnectToMongo<T>(table);
+            var coll = ConnectToMongo<T>(collection);
             var filter = builder.Regex(field, queryExpr);
-            return collection.Find(filter).ToList();
+            return coll.Find(filter).ToList();
         }
 
 
-        public List<T> LoadRecordByDate<T>(string table, string field, DateTime datetime)
+        public List<T> LoadRecordByDate<T>(string collection, string field, DateTime datetime)
         {
-            var collection = ConnectToMongo<T>(table);
+            var coll = ConnectToMongo<T>(collection);
             var filter = Builders<T>.Filter.Eq(field, datetime);
-            return collection.Find(filter).ToList();
+            return coll.Find(filter).ToList();
         }
+               
 
-        
-
-        public async void DeleteRecordByIndex<T>(string table, string field, string value) // Delete record by a value.
+        public async void DeleteRecordByIndex<T>(string collection, string field, string value) // Delete record by a value.
         {
-            var collection = ConnectToMongo<T>(table);
+            var coll = ConnectToMongo<T>(collection);
             var filter = Builders<T>.Filter.Eq(field, value);
-            await collection.DeleteOneAsync(filter);
+            await coll.DeleteOneAsync(filter);
         }
 
-        public void UpsertRecord<T>(string table, ObjectId id, T record) // Update data or if it isnt available create it
+        public void UpsertRecord<T>(string collection, ObjectId id, T record) // Update data or if it isnt available create it
         {
-            var collection = ConnectToMongo<T>(table);
-
+            var coll = ConnectToMongo<T>(collection);
 #pragma warning disable CS0618 // 'IMongoCollection<T>.ReplaceOne(FilterDefinition<T>, T, UpdateOptions, CancellationToken)' is obsolete: 'Use the overload that takes a ReplaceOptions instead of an UpdateOptions.'
-            var result = collection.ReplaceOne(new BsonDocument("_id", id), record,
-                new UpdateOptions { IsUpsert = true });
+            var result = coll.ReplaceOne(new BsonDocument("_id", id), record,
+            new UpdateOptions { IsUpsert = true });
 #pragma warning restore CS0618 // 'IMongoCollection<T>.ReplaceOne(FilterDefinition<T>, T, UpdateOptions, CancellationToken)' is obsolete: 'Use the overload that takes a ReplaceOptions instead of an UpdateOptions.'
         }
     }
