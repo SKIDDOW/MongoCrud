@@ -66,3 +66,9 @@ Load all records of a collection
 ```c#
 var rec = db.LoadRecords<Employee>("Employee");
 ```
+
+Load a record by index
+
+```c#
+var rec = db.LoadRecordByIndex<Employee>("Employee", "Name", "Jone Doe");
+```
