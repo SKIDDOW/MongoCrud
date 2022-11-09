@@ -5,7 +5,7 @@ MongoCrud is a simple c# class for MongoDB CRUD operations.
 ## Features
 - Create, read, update and delete documents
     - Create unique records
-    - Search by case
+    - Case-Insensitive search
     - Read by index/Id
     - Delete by index/Id
 
