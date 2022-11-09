@@ -34,13 +34,12 @@ public  class Employee
 
 ```c#
 using MongoCrud;
-
-string connectionString = "mongodb://localhost:27017";
-string collectionName = "EmployeeDB";
-
 ```
 
 ```c#
+string connectionString = "mongodb://localhost:27017";
+string collectionName = "EmployeeDB";
+
 using (Crud db = new Crud(connectionString, collectionName))
 {
     // do your things here ...
