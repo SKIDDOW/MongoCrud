@@ -10,7 +10,7 @@ MongoCrud is a class to manage MongoDB data collections in C# .NET
     ```
     dotnet add package MongoCrud
     ```
-<hr/>
+---
 
 ## Usage
 
@@ -47,7 +47,7 @@ using (Crud db = new Crud(connectionString, collectionName))
 }
 
 ```
-<hr/>
+---
 
 ### Insert Employee data
 
@@ -61,7 +61,7 @@ var emp = new Employee()
 await db.InsertRecord("Employee", emp);
 
 ```
-<hr/>
+---
 
 ### Insert unique recored
 
@@ -74,28 +74,28 @@ var emp = new Employee()
 };
 await db.InsertUniqRecord("Employee", emp, "EmpID");
 ```
-<hr/>
+---
 
 ### Load all records of a collection
 
 ```c#
 var rec = await db.LoadRecords<Employee>("Employee");
 ```
-<hr/>
+---
 
 ### Load records by index
 
 ```c#
 var rec = db.LoadRecordByIndex<Employee>("Employee", "Name", "Jone Doe");
 ```
-<hr/>
+---
 
 ### Load one record by index
 
 ```c#
 var rec = db.LoadOneRecordByIndex<Employee>("Employee", "Name", "Jone Doe");
 ```
-<hr/>
+---
 
 ### Load a record by Id
 First, we have to get ObjectId before doing this. To get an ObjectId you can use any method as shown in above.
@@ -106,7 +106,7 @@ ObjectId ObjectID = new ObjectId("6366675caf5305273398cfbd");
 ```c#
 var rec = db.LoadRecordById<Employee>("Employee", ObjectID);
 ```
-<hr/>
+---
 
 ### Search case
 Below example will display all records from Employee collection, which Name starts from 'J'
@@ -120,7 +120,7 @@ This will delete all records where EmpID is, '1000'. However, if EmpID is unique
 ```c#
 db.DeleteRecordByIndex<Employee>("Employee", "EmpID", "1000");
 ```
-<hr/>
+---
 
 ### Delete a record
 To delete a record we have to get ObjectId
