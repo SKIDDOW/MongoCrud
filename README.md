@@ -1,6 +1,12 @@
 ![MongoCrud](https://raw.githubusercontent.com/skiddow/MongoCrud/main/assets/banner.jpg)
 # MongoCrud ➕ 🔄️ ❌
-MongoCrud is a simple c# class for MongoDB crud operations.
+MongoCrud is a simple c# class for MongoDB CRUD operations.
+
+## Features
+- Create, read, update and delete documents
+    - Create unique records
+    - Search by case
+    - Delete by index
 
 ## Installation
 - You can search for 'MongoCrud' in NuGet Pakage Manager in Visual Studio.
