@@ -147,4 +147,27 @@ This will update Employee Name.
 db.UpsertRecord("Employee", oneRec.Id, oneRec);
 ```
 
+## Bonus configuration for database connection.
+
+Create a new class name, `dbConn`
+
+```c#
+namespace MongoCrud;
+public class dbConn
+{
+    public static string connString = "mongodb://localhost:27017";
+    public static string dbName = "StocX";
+}
+```
+And then you can run CRUD operations,
+
+```c#
+using MongoCrud;
+
+using (Crud db = new Crud(dbConn.connString, dbConn.dbName))
+{
+    // do your things here .... 
+}
+```
+
 # ❤️😍
