@@ -159,7 +159,7 @@ public class dbConn
     public static string dbName = "StocX";
 }
 ```
-And then you can run CRUD operations,
+And then you can run CRUD operations, as below
 
 ```c#
 using MongoCrud;
