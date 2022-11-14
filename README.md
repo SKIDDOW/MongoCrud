@@ -170,4 +170,27 @@ using (Crud db = new Crud(dbConn.connString, dbConn.dbName))
 }
 ```
 
+## A full example for insert
+
+```c#
+using MongoCrud;
+
+public class MyProject
+{
+    public void InsertData()
+    {
+        using (Crud db = new Crud(dbConn.connString, dbConn.dbName))
+        {
+            var emp = new Employee()
+            {
+                Name = "Jone Doe",
+                EmpID = 1000, // Unique ID
+                Birthday = Convert.ToDateTime("1981-04-13")
+            };
+            await db.InsertUniqRecord("Employee", emp, "EmpID");
+        }
+    }
+}
+```
+
 # ❤️😍
