@@ -146,7 +146,7 @@ This will update Employee Name.
 ```c#
 db.UpsertRecord("Employee", oneRec.Id, oneRec);
 ```
-
+---
 ## Bonus configuration for database connection.
 
 Create a new class name, `dbConn`
@@ -169,7 +169,7 @@ using (Crud db = new Crud(dbConn.connString, dbConn.dbName))
     // do your things here .... 
 }
 ```
-
+---
 ## A full example for insert
 
 ```c#
