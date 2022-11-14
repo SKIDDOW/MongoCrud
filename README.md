@@ -44,9 +44,9 @@ using MongoCrud;
 
 ```c#
 string connectionString = "mongodb://localhost:27017";
-string collectionName = "EmployeeDB";
+string databaseName = "EmployeeDB";
 
-using (Crud db = new Crud(connectionString, collectionName))
+using (Crud db = new Crud(connectionString, databaseName))
 {
     // do your things here ...
 }
