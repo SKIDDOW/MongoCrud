@@ -22,6 +22,8 @@ MongoCrud is a simple c# class for MongoDB CRUD operations.
 Employee Model
 
 ```c#
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 public  class Employee
 {
