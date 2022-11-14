@@ -156,7 +156,7 @@ namespace MongoCrud;
 public class dbConn
 {
     public static string connString = "mongodb://localhost:27017";
-    public static string dbName = "StocX";
+    public static string dbName = "EmployeeDB";
 }
 ```
 And then you can run CRUD operations, as below
