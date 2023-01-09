@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
@@ -122,6 +123,32 @@ namespace MongoCrud
             return coll.Find(filter).ToList();
         }
                
+        public List<T> LoadBetweenDates<T>(string collection, string date_field, DateTime fromDate, DateTime toDate)
+        {
+            var coll = ConnectToMongo<T>(collection);
+
+            // Gte  = greater than or equal 
+            // Gt  = greater than 
+            // Lte  = less than or equal
+            // Lt  = less than
+
+            //var from_filter = Builders<T>.Filter.Gte(date_field, fromDate);
+            //var to_filter = Builders<T>.Filter.Lt(date_field, toDate);
+
+            var filter = Builders<T>.Filter.Gte(date_field, fromDate) & Builders<T>.Filter.Lt(date_field, toDate);
+
+            //var filter = Builders<T>.Filter.And(new[] { from_filter, to_filter });
+            return coll.Find(filter).ToList();
+        }
+
+
+        public async Task<List<T>> GreaterThanNumber<T>(string collection, string field, double number)
+        {
+            var coll = ConnectToMongo<T>(collection);
+            var filter = Builders<T>.Filter.Gt(field, number);
+            var result = await coll.FindAsync(filter);
+            return result.ToList();
+        }
 
         public async void DeleteRecordByIndex<T>(string collection, string field, string value) // Delete record by a value.
         {
