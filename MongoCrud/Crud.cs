@@ -123,7 +123,7 @@ namespace MongoCrud
             return coll.Find(filter).ToList();
         }
                
-        public List<T> LoadBetweenDates<T>(string collection, string date_field, DateTime fromDate, DateTime toDate)
+        public async Task<List<T>> LoadBetweenDates<T>(string collection, string date_field, DateTime fromDate, DateTime toDate)
         {
             var coll = ConnectToMongo<T>(collection);
 
@@ -136,9 +136,9 @@ namespace MongoCrud
             //var to_filter = Builders<T>.Filter.Lt(date_field, toDate);
 
             var filter = Builders<T>.Filter.Gte(date_field, fromDate) & Builders<T>.Filter.Lt(date_field, toDate);
-
             //var filter = Builders<T>.Filter.And(new[] { from_filter, to_filter });
-            return coll.Find(filter).ToList();
+            var result = await coll.FindAsync(filter);
+            return result.ToList();
         }
 
 
