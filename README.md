@@ -1,5 +1,5 @@
-![MongoCrud](https://raw.githubusercontent.com/skiddow/MongoCrud/main/assets/banner.jpg)
-# MongoCrud ➕ 🔄️ ❌
+![MongoDB.CRUD](https://raw.githubusercontent.com/skiddow/MongoCrud/main/assets/banner.jpg)
+# MongoDB.CRUD ➕ 🔄️ ❌
 MongoCrud is a simple c# class for MongoDB CRUD operations.
 
 ![Nuget](https://img.shields.io/nuget/v/MongoCrud?style=for-the-badge)
@@ -44,7 +44,7 @@ public  class Employee
 ### Open connection to MongoDB (using statement)
 
 ```c#
-using MongoCrud;
+using MongoDB;
 ```
 
 ```c#
@@ -157,7 +157,7 @@ db.UpsertRecord("Employee", oneRec.Id, oneRec);
 Create a new class name, `dbConn`
 
 ```c#
-namespace MongoCrud;
+namespace MongoDB;
 public class dbConn
 {
     public static string connString = "mongodb://localhost:27017";
@@ -167,7 +167,7 @@ public class dbConn
 And then you can run CRUD operations, as below
 
 ```c#
-using MongoCrud;
+using MongoDB;
 
 using (Crud db = new Crud(dbConn.connString, dbConn.dbName))
 {
@@ -178,7 +178,7 @@ using (Crud db = new Crud(dbConn.connString, dbConn.dbName))
 ## A full example for insert
 
 ```c#
-using MongoCrud;
+using MongoDB;
 
 public class MyProject
 {
