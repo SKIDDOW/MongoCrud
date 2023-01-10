@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
@@ -8,10 +8,10 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Authors>SKIDDOW</Authors>
 	<Description>Simple c# class for MongoDB CRUD operations. [SIMPLICITY IS GUARANTEED!]</Description>
-    <AssemblyVersion>1.1.2</AssemblyVersion>
-    <FileVersion>1.1.2</FileVersion>
+    <AssemblyVersion>1.1.2.1</AssemblyVersion>
+    <FileVersion>1.1.2.1</FileVersion>
     <PackAsTool>False</PackAsTool>
-    <Version>1.1.2</Version>
+    <Version>1.1.2.1</Version>
     <PackageProjectUrl>https://github.com/skiddow/MongoDB.CRUD</PackageProjectUrl>
     <PackageTags>MongoCrud, MongoDB, CRUD, NoSQL, Database, MongoDBCRUD, mongo-db-crud</PackageTags>
     <PackageIcon>Asset 1@4x.png</PackageIcon>

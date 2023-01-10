@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace MongoDB
+namespace MongoDB.Crud
 {
     public class Crud : IDisposable
     {
