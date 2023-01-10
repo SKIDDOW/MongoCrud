@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB.CRUD", "MongoDB.CRUD\MongoDB.CRUD.csproj", "{626C7CCA-A26A-4A84-BB88-AA1269D744FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoCrud", "MongoDB.CRUD\MongoCrud.csproj", "{626C7CCA-A26A-4A84-BB88-AA1269D744FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
