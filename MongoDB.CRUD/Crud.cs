@@ -94,8 +94,8 @@ namespace MongoDB.Crud
         public T LoadOneRecordByIndex<T>(string collection, string field, string value)
         {
             var coll = ConnectToMongo<T>(collection);
-            var filter = Builders<T>.Filter.Eq(field, value);
-            return coll.Find(filter).First();
+            var filter = Builders<T>.Filter.Eq(field, value);            
+            return coll.Find(filter).FirstOrDefault();
         }
 
 
