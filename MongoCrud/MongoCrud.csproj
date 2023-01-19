@@ -4,15 +4,15 @@
     <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RepositoryUrl>https://github.com/skiddow/MongoDB.CRUD</RepositoryUrl>
+    <RepositoryUrl>https://github.com/skiddow/MongoCrud</RepositoryUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Authors>SKIDDOW</Authors>
-	<Description>Simple c# class for MongoDB CRUD operations. [SIMPLICITY IS GUARANTEED!]</Description>
+	<Description>Simple C# class for MongoDB CRUD operations. [SIMPLICITY IS GUARANTEED!]</Description>
     <AssemblyVersion>1.1.2.1</AssemblyVersion>
     <FileVersion>1.1.2.1</FileVersion>
     <PackAsTool>False</PackAsTool>
     <Version>1.1.2.1</Version>
-    <PackageProjectUrl>https://github.com/skiddow/MongoDB.CRUD</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/skiddow/MongoCrud</PackageProjectUrl>
     <PackageTags>MongoCrud, MongoDB, CRUD, NoSQL, Database, MongoDBCRUD, mongo-db-crud</PackageTags>
     <PackageIcon>Asset 1@4x.png</PackageIcon>
   </PropertyGroup>
