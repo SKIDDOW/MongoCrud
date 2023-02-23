@@ -8,10 +8,10 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Authors>SKIDDOW</Authors>
 	<Description>Simple C# class for MongoDB CRUD operations. [SIMPLICITY IS GUARANTEED!]</Description>
-    <AssemblyVersion>1.1.2.1</AssemblyVersion>
-    <FileVersion>1.1.2.1</FileVersion>
+    <AssemblyVersion>1.1.3</AssemblyVersion>
+    <FileVersion>1.1.3</FileVersion>
     <PackAsTool>False</PackAsTool>
-    <Version>1.1.2.1</Version>
+    <Version>1.1.3</Version>
     <PackageProjectUrl>https://github.com/skiddow/MongoCrud</PackageProjectUrl>
     <PackageTags>MongoCrud, MongoDB, CRUD, NoSQL, Database, MongoDBCRUD, mongo-db-crud</PackageTags>
     <PackageIcon>Asset 1@4x.png</PackageIcon>
