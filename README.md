@@ -11,6 +11,7 @@ MongoCrud is a simple c# class for MongoDB CRUD operations.
     - Case-Insensitive search
     - Read by index/Id
     - Delete by index/Id
+    - Search between dates
 
 ## Installation
 - You can search for 'MongoCrud' in NuGet Pakage Manager in Visual Studio.
@@ -122,6 +123,16 @@ var rec = db.LoadRecordById<Employee>("Employee", ObjectID);
 Below example will display all records from Employee collection, which Name starts from 'J'
 ```c#
 var rec = db.SearchCase<Employee>("Employee", "Name", "J");
+```
+---
+
+### Search between two dates
+This example will display Employees who has birthday between selected dates.
+```c#
+DateTime startDate = Convert.ToDateTime("1980-04-20");
+DateTime endDate = Convert.ToDateTime("1990-04-20");
+
+var rec = await db.LoadBetweenDates<Employee>("Employee", "Birthday", startDate, endDate);
 ```
 ---
 
