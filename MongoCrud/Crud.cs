@@ -90,6 +90,17 @@ namespace MongoDB.Crud
             return coll.Find(filter).ToList();
         }
 
+        // Search async with case in-sensitive
+        public async Task<List<T>> SearchAsync<T>(string collection, string field, string value)
+        {
+            var queryExpr = new BsonRegularExpression(new Regex(value, RegexOptions.IgnoreCase));
+            var builder = Builders<T>.Filter;
+            var coll = ConnectToMongo<T>(collection);
+            var filter = builder.Regex(field, queryExpr);
+            var result = await coll.FindAsync(filter);
+            return result.ToList();
+        }
+
 
         public T LoadOneRecordByIndex<T>(string collection, string field, string value)
         {

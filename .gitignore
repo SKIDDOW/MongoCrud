@@ -1,3 +1,6 @@
 .vs/
 MongoCrud/bin
 MongoCrud/obj
+Test/bin
+Test/obj
+Test/GitIgnoredClass.cs
