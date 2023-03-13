@@ -7,9 +7,6 @@ Console.WriteLine("Hello, World!");
 
 using (Crud db = new Crud(GitIgnoredClass.Conn, GitIgnoredClass.DB))
 {
-    var rec = await db.SearchAsync<UserModel>("Users", "UserName", "admin");
-    foreach (var item in rec)
-    {
-        Console.WriteLine(item.UserName);
-    }
+    var rec = await db.LoadOneRecordByIndexAsync<UserModel>("Users", "UserName", "admin");
+    Console.WriteLine(rec.UserName);
 }
